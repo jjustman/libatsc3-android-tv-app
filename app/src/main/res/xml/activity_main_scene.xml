@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/open_right_side_menu"
+        motion:constraintSetEnd="@+id/middle"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="@integer/esg_menu_drag_threshold">
+        <OnSwipe
+            motion:dragThreshold="@integer/esg_menu_drag_threshold"
+            motion:dragDirection="dragLeft"/>
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/middle"
+        motion:duration="@integer/esg_menu_duration">
+        <OnSwipe
+            motion:dragThreshold="@integer/esg_menu_drag_threshold"
+            motion:dragDirection="dragLeft"/>
+    </Transition>
+
+    <Transition
+        android:id="@+id/open_bottom_menu_from_start"
+        motion:constraintSetEnd="@+id/top"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="@integer/dev_menu_duration">
+
+        <OnSwipe
+            motion:dragThreshold="@integer/dev_menu_drag_threshold"
+            motion:dragDirection="dragUp"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/rmp_player_container">
+            <Layout
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent" />
+        </Constraint>
+
+        <Constraint android:id="@+id/channel_header">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constraintHeight_percent="@dimen/scale_factor_for_end_position_of_esg"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintEnd_toEndOf="@+id/service_guide_view"
+                motion:layout_constraintStart_toStartOf="@+id/service_guide_view" />
+        </Constraint>
+
+        <Constraint android:id="@+id/service_guide_view">
+            <Layout
+                android:layout_width="@dimen/width_hidden_esg_menu"
+                android:layout_height="0dp"
+                motion:layout_constraintTop_toBottomOf="@+id/channel_header"
+                motion:layout_constraintStart_toEndOf="@+id/rmp_player_container"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/bottom_container">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                motion:layout_constraintTop_toBottomOf="@+id/collapsed_bottom_container_line" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/middle">
+        <Constraint android:id="@+id/rmp_player_container">
+            <Layout
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/channel_header">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constraintHeight_percent="@dimen/scale_factor_for_end_position_of_esg"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintStart_toStartOf="@+id/service_guide_view"
+                motion:layout_constraintEnd_toEndOf="@+id/service_guide_view" />
+        </Constraint>
+
+        <Constraint android:id="@+id/service_guide_view">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constraintTop_toBottomOf="@+id/channel_header"
+                motion:layout_constraintStart_toEndOf="@+id/side_menu_container_line_45"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/bottom_container">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                motion:layout_constraintTop_toBottomOf="@+id/collapsed_bottom_container_line" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/rmp_player_container">
+            <Layout
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/channel_header">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constraintHeight_percent="@dimen/scale_factor_for_end_position_of_esg"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintStart_toEndOf="@+id/side_menu_container_line_30"
+                motion:layout_constraintEnd_toEndOf="@+id/service_guide_view" />
+        </Constraint>
+
+        <Constraint android:id="@+id/service_guide_view">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/channel_header" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bottom_container">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                motion:layout_constraintTop_toBottomOf="@+id/collapsed_bottom_container_line" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/top">
+
+        <Constraint android:id="@+id/rmp_player_container">
+            <Layout
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/channel_header">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constraintHeight_percent="@dimen/scale_factor_for_end_position_of_esg"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintEnd_toEndOf="@+id/service_guide_view"
+                motion:layout_constraintStart_toStartOf="@+id/service_guide_view" />
+        </Constraint>
+
+        <Constraint android:id="@+id/service_guide_view">
+            <Layout
+                android:layout_width="@dimen/width_hidden_esg_menu"
+                android:layout_height="0dp"
+                motion:layout_constraintTop_toBottomOf="@+id/channel_header"
+                motion:layout_constraintStart_toEndOf="@+id/rmp_player_container"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/bottom_container">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

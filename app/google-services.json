@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "571739174909",
+    "firebase_url": "https://nextgen-tv.firebaseio.com",
+    "project_id": "nextgen-tv",
+    "storage_bucket": "nextgen-tv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571739174909:android:654b91e033dbe6da370b94",
+        "android_client_info": {
+          "package_name": "com.nextgenbroadcast.mobile.tvandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571739174909-u60n5e7i6v5s4lrgio9h1cq6im5q3jfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_6nq8KZLEcXSL8UXAhLQELKGaL-e45ss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571739174909-u60n5e7i6v5s4lrgio9h1cq6im5q3jfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

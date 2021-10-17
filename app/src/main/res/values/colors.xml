@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="semiTransparent">#73000000</color>
+
+    <color name="peekerColor">#7FFFFFFF</color>
+    <color name="esgIndicatorColor">#80FFFFFF</color>
+
+    <color name="textColor">#FFE7EDF1</color>
+    <color name="textSelectedColor">#FF24070A</color>
+
+    <color name="gridLineSelectionColor">#FF174075</color>
+    <color name="gridCellSelectionColor">#FFBAB3B5</color>
+    <color name="gridBgColor">#FF0E2C5A</color>
+    <color name="gridTimeIndicatorColor">#7FA5FB4E</color>
+    <color name="grid_item_focus">#FFFFC40C</color>
+
+    <!-- rename -->
+    <color name="headerBg">#17416E</color>
+    <color name="progressBg">#74A0B2</color>
+    <color name="progressLine">#f2f2f2</color>
+    <color name="timeBg">#071C44</color>
+    <color name="separator">#133666</color>
+    <color name="channelRipple">#77174075</color>
+    <color name="channelNumberBg">#74A0B2</color>
+    <color name="antenna_red">#fe2712</color>
+    <color name="antenna_yellow">#ffc40c</color>
+
+</resources>

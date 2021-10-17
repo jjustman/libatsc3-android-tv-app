@@ -1,0 +1,4 @@
+[submodule "Middleware"]
+	path = Middleware
+	url = https://dev.azure.com/NGWP/Middleware/_git/Middleware
+	branch = develop

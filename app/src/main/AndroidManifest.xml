@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nextgenbroadcast.mobile.tvandroid">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- required to disable DND in case of AEA received  -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:screenOrientation="landscape"
+            android:supportsPictureInPicture="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.nextgenbroadcast.mobile.tvandroid.action.watch" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.pcap" />
+                <data android:pathPattern=".*\\..*\\.pcap" />
+                <data android:pathPattern=".*\\..*\\..*\\.pcap" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.pcap" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.pcap" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.pcap" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.nextgenbroadcast.mobile.middleware.service.EmbeddedAtsc3Service"
+            android:exported="false">
+
+            <meta-data
+                android:name="com.nextgenbroadcast.mobile.middleware.location.FrequencyLocator"
+                android:resource="@xml/default_frequencies" />
+
+            <meta-data
+                android:name="org.ngbp.libatsc3.middleware.android.phy.SaankhyaPHYAndroid"
+                android:resource="@xml/saankhya_phy" />
+
+            <meta-data
+                android:name="com.nextgenbroadcast.mobile.middleware.phy.Atsc3UsbPhyConnector"
+                android:resource="@xml/device_filter" />
+
+        </service>
+
+    </application>
+
+</manifest>

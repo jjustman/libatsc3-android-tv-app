@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nextgenbroadcast.mobile.tvandroid.servicesGuide.view.ServiceGuideDataItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleTextView"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/channel_background"
+    android:ellipsize="end"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:foreground="@drawable/channel_foreground"
+    android:gravity="center_vertical"
+    android:lines="1"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="4dp"
+    android:textColor="@color/text_color_selector" />

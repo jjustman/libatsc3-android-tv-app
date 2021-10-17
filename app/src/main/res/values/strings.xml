@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name" translatable="false">TV App</string>
+    <string name="select_source" translatable="false">Select source</string>
+    <string name="select_channel" translatable="false">Select channel</string>
+    <string name="location_request_rationale">To improve app performance it requires permission to get your current location</string>
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+    <string name="service_guide_no_information">No Information</string>
+    <string name="service_status_awaiting">Awaiting a source</string>
+    <string name="service_status_tuning">Tuning</string>
+    <string name="service_status_scanning">Scanning  %d:%s left</string>
+    <string name="service_status_buffering">Buffering: %s</string>
+    <string name="service_guide_program_info_format">DTV | %1$s-%2$s | %3$s | %4$Tl:%4$TM %4$Tp - %5$Tl:%5$TM %5$Tp |</string>
+    <string name="dev_select_source">select source</string>
+    <string name="dev_current_source">select source</string>
+    <string name="service_guide_loading_message">Service guide unavailable</string>
+    <string name="menu_select_track_title">Select media tracks</string>
+    <string name="menu_tune_title">Tune receiver</string>
+    <string name="menu_about_title">About</string>
+    <string name="settings_frequency_hint">Receiver frequency in MHz</string>
+    <string name="dialog_tune_btn_title">Tune</string>
+    <string name="dialog_atsc3_deployment_info_ok">OK</string>
+    <string name="dialog_atsc3_deployment_info_click_here">click here</string>
+    <string name="dialog_atsc3_deployment_info_title">You may not currently be in a market with ATSC 3.0 Service.</string>
+    <string name="dialog_atsc3_deployment_info">Please %1$s to get an updated list of US markets currently broadcasting ATSC 3.0. If you are in a test market, and know your transmission frequency, please %2$s to tune manually.</string>
+    <string name="nextgen_deployments_url">https://www.atsc.org/nextgen-tv/deployments/</string>
+    <string name="message_service_apk_not_found">Application with package name %s is unavailable</string>
+    <string name="receiver_scanning_cancel_btn">cancel</string>
+    <string name="tun_dialog_scan_btn">Scan range</string>
+    <string name="permission_request_info_title">Permission required</string>
+    <string name="permission_request_info_dnd">Permission to change Do Not Disturb mode is important for Emergency Alerting</string>
+    <string name="cancel">Cancel</string>
+</resources>

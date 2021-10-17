@@ -1,0 +1,86 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/app_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="LoadingIndicator" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ServicesGuideItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/services_guide_cell_height</item>
+    </style>
+
+    <style name="ESGHeader">
+        <item name="android:background">@color/headerBg</item>
+    </style>
+
+    <style name="ESGHeader.Title" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ESGHeader.Desc" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ServicesGuideItem.Header">
+        <item name="android:background">@color/timeBg</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">4dp</item>
+    </style>
+
+    <style name="ESGTime">
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:background">@color/timeBg</item>
+    </style>
+
+    <style name="ESGTime.Desc" parent="TextAppearance.AppCompat.Small">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ESGTime.Time" parent="TextAppearance.AppCompat.Small">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ServicesGuideItem.Channel">
+        <item name="android:background">@drawable/channel_background</item>
+    </style>
+
+    <style name="ESGChannel" />
+
+    <style name="ESGChannel.Number" parent="TextAppearance.AppCompat.Small">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:background">@drawable/circle</item>
+    </style>
+
+    <style name="ESGChannel.SubNumber" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="ESGChannel.Title" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ESGFilter" parent="ESGTime">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+</resources>

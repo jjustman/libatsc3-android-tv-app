@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nextgenbroadcast.mobile.tvandroid.servicesGuide.view.ServiceGuideServiceItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ServicesGuideItem.Channel">
+
+    <TextView
+        android:id="@+id/service_major_num_view"
+        style="@style/ESGChannel.Number"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="17" />
+
+    <TextView
+        android:id="@+id/service_full_num_view"
+        style="@style/ESGChannel.SubNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/service_major_num_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="17 - 1" />
+
+    <TextView
+        android:id="@+id/service_title"
+        style="@style/ESGChannel.Title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/service_full_num_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Channel Title" />
+
+    <!-- TODO: try rewrite to BG -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.nextgenbroadcast.mobile.tvandroid.servicesGuide.view.ServiceGuideServiceItemView>

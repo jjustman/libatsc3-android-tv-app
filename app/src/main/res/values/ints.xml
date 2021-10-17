@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="esg_menu_duration" type="integer">150</item>
+    <item name="esg_menu_drag_threshold" type="integer">50</item>
+    <item name="dev_menu_duration" type="integer">50</item>
+    <item name="dev_menu_drag_threshold" type="integer">50</item>
+</resources>

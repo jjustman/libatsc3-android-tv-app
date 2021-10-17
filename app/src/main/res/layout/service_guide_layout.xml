@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nextgenbroadcast.mobile.tvandroid.servicesGuide.ServiceGuideView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/service_guide_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/service_guide_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/gridBgColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/time_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/service_guide_grid"
+        app:layout_constraintEnd_toEndOf="@+id/service_guide_grid"
+        app:layout_constraintStart_toStartOf="@+id/service_guide_grid"
+        app:layout_constraintTop_toTopOf="@+id/service_guide_grid" />
+
+    <FrameLayout
+        android:id="@+id/channels_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gridBgColor"
+        app:layout_constraintBottom_toBottomOf="@+id/service_guide_grid"
+        app:layout_constraintStart_toStartOf="@+id/service_guide_grid"
+        app:layout_constraintTop_toTopOf="@+id/service_guide_grid" />
+
+    <FrameLayout
+        android:id="@+id/service_filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/services_guide_cell_height"
+        android:clipToPadding="true"
+        android:paddingBottom="@dimen/services_guide_divider_size"
+        app:layout_constraintTop_toTopOf="@+id/time_container">
+
+        <include
+            android:id="@+id/service_filter_view"
+            layout="@layout/service_guide_filter_layout" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/esg_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/headerBg">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            style="@style/LoadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/service_guide_loading_message"
+            app:layout_constraintBottom_toBottomOf="@+id/guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_line" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.nextgenbroadcast.mobile.tvandroid.servicesGuide.ServiceGuideView>

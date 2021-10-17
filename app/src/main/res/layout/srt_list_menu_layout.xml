@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sources_sheet_peeker_text"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/peekerColor"
+        android:gravity="center_horizontal"
+        android:text="@string/dev_select_source"
+        android:textColor="@color/textColor"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp" />
+
+    <ListView
+        android:id="@+id/sources_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#676767"
+        app:layout_constraintTop_toBottomOf="@+id/sources_sheet_peeker_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
